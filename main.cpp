@@ -31,6 +31,8 @@ public:
 bool isWon(int i) {
     for (int j = i - 1; j >= 0; --j) {
         if (coins[i].check(j)) {
+            cout << "Moneta o wspolrzednych: " << coins[i].x << ", " << coins[i].y << endl;
+            cout << "Przeslonila monete o wspolrzednych: " << coins[j].x << ", " << coins[j].y << endl;
             return true;
         }
     }
@@ -58,7 +60,7 @@ int main() {
         }
     }
     if (result) {
-        cout << "Wygrales. Runda: " << i + 1 << endl;
+        cout << "Wygrales w rundzie: " << i + 1 << endl;
     } else {
         cout << "Niestety przegrales" << endl;
     }
